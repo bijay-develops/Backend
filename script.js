@@ -25,8 +25,16 @@ const fs = require('fs');
 //     else console.log("File Removed");
 // })
 
-fs.rm("./copy", {recursive: true}, function(err){
-    if(err) console.error(err.message);
-    else console.log("Folder removed");
-})
+// fs.rm("./copy", {recursive: true}, function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Folder removed");
+// })
 
+
+
+
+const http = require('http');
+const server = http.createServer(function(req, res){
+    res.end("hello world");
+})
+server.listen(3000);
