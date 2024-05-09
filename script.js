@@ -1,4 +1,4 @@
-const fs = require('fs');
+// const fs = require('fs');
 
 // fs.writeFile("hey.txt", "Hello This is Bijay", function(err){
 //     if(err) console.error(err);
@@ -33,8 +33,27 @@ const fs = require('fs');
 
 
 
-const http = require('http');
-const server = http.createServer(function(req, res){
-    res.end("hello world");
+// const http = require('http');
+// const server = http.createServer(function(req, res){
+//     res.end("hello world");
+// })
+// server.listen(3000);
+
+
+
+//ExpressJs started
+
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
 })
-server.listen(3000);
+
+app.get('/profile', function (req, res){
+    res.send('I am Bijay don bro!')
+})
+
+app.listen(3000)
+
+
