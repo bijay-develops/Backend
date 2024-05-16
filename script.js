@@ -59,38 +59,38 @@
 
 //Middleware 
 
-const express = require('express')
-const app = express()
+// const express = require('express')
+// const app = express()
 
-app.use(function(req, res, next){
-  console.log('Middleware Chalyo');
-  next();
-})
+// app.use(function(req, res, next){
+//   console.log('Middleware Chalyo');
+//   next();
+// })
 
-app.use(function(req, res, next){
-  console.log('Middleware feri Chalyo');
-  next();
-})
+// app.use(function(req, res, next){
+//   console.log('Middleware feri Chalyo');
+//   next();
+// })
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+// app.get('/', function (req, res) {
+//   res.send('Hello World')
+// })
 
-app.get('/profile', function (req, res, next){
-    return next(new Error("Something went wrong"))
-})
-
-
-app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
-
-app.listen(3000)
+// app.get('/profile', function (req, res, next){
+//     return next(new Error("Something went wrong"))
+// })
 
 
+// app.use((err, req, res, next) => {
+//   console.error(err.stack)
+//   res.status(500).send('Something broke!')
+// })
 
-// //json() and url encoded
+// app.listen(3000)
+
+
+
+// // json() and url encoded
 
 // const express = require('express')
 // const app = express()
@@ -111,3 +111,7 @@ app.listen(3000)
 // })
 
 // app.listen(3000)
+
+
+
+
